@@ -12,7 +12,8 @@ mongoose.connect("mongodb://admin:admin@ds125388.mlab.com:25388/secure-api-jwt")
 app.use(bodyParser.json());
 
 // ROUTERS
-require("./routes/user")(app);
+require("./routes/authRoutes")(app);
+require("./routes/userRoutes")(app);
 
 // SERVER
 const port = process.env.PORT || 3000;
